@@ -1,0 +1,49 @@
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: whitesmoke;
+    border: 1x solid lightgray;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);}
+.left_header{
+    margin-left: 2rem;
+    display: flex;
+    padding: 1px;
+}
+
+.right_header{
+    padding: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+ }
+ .search{
+    margin-right: 5rem; 
+
+ }
+.right_header input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid gray;
+    height: 5vh;
+    border-radius: 4px;
+    background-color: whitesmoke;
+}
+.right_header input:focus{
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
+    background-color: whitesmoke;
+    
+ }

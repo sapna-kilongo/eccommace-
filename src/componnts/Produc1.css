@@ -1,0 +1,41 @@
+.product_card{
+  width: 250px;
+  height: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+.product_card img{
+  object-fit: fill;
+  width: 100%;
+  height: 65%;
+  
+}
+
+.product_card:hover{
+ transform: scale(1.07);
+
+}
+.title{
+ display: flex;
+ justify-content:space-between;
+ margin-left: auto;
+ align-items: center;
+
+}
+
+.title p{
+  color: green;
+
+}
+.add_cart{
+   background-color: green;
+   margin-right: 0.8rem;
+}
+.add_view{
+    background-color: yellow;
+    margin-right: 0.8rem;
+ }
