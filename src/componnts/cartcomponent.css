@@ -1,0 +1,24 @@
+.cart_component{
+ width: 250px;
+ height: 350px;
+ position: absolute;
+ background-color: white;
+ right: 4%;
+ top: 85%;
+ z-index: 5;
+ display: flex;
+ flex-direction: column;
+ border: 1px solid lightgray;
+ padding: 20px;
+}
+.cart-items{
+ display: flex;
+ flex-direction: column;
+ height: 350px;
+ overflow-y: scroll;
+
+}
+.buttton_2{
+ margin-top: auto;
+
+}

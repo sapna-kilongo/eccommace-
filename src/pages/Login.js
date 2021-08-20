@@ -4,7 +4,7 @@ import './Login.css'
 import google from '../images/download.png'
 import { Link } from 'react-router-dom'
 
-function login() {
+export default function Login() {
     return (
         <div className="login">
             <form>
@@ -33,4 +33,4 @@ function login() {
     )
 }
 
-export default login
+

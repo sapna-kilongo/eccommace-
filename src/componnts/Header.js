@@ -2,29 +2,20 @@ import React from 'react'
 import "./Header.css"
 import { IconButton,Avatar,Badge} from '@material-ui/core'
 import { ShoppingCart, LaptopMacOutlined} from '@material-ui/icons'
-import { withStyles } from '@material-ui/core/styles';
 import {Link} from 'react-router-dom'
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
+import Cartcoponent from './Cartcoponent'
+import {setToggle} from '../Redux/action/AddToCart'
+import { useSelector,useDispatch} from 'react-redux'
+
 
 
 
 function Header() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  }
-
+    const hidden=useSelector((state)=>state.cart.hidden)
+    const dispatch =useDispatch()
+ 
+   
 
     return (
         <div className="Header" >
@@ -42,14 +33,17 @@ function Header() {
                </div>
                
             <div>
-               <IconButton><Link  to="/cart"><Badge badgeContent={4} color="secondary"><ShoppingCart/>
-                        </Badge></Link></IconButton>
+               <IconButton onClick={()=>{dispatch(setToggle())}}><Badge badgeContent={4} color="secondary"><ShoppingCart  />
+                        </Badge></IconButton>
                <IconButton>  <Link to='/account/login' ><Avatar  width='50' height='50'/></Link>  </IconButton>
             </div>
             
-               
+            
            </div>
+           { hidden ? null:<Cartcoponent/> }
 
+           
+          
 
        
 

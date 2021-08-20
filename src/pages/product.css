@@ -1,0 +1,6 @@
+.product_single{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+    align-items: center;margin: auto;
+    }

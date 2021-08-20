@@ -1,5 +1,6 @@
 const INITIAL_STATE={
-    Products:[]
+    Products:[],
+    Product:[]
  
  }
  export const ProductsReducer=(state=INITIAL_STATE,action)=>{
@@ -8,6 +9,13 @@ const INITIAL_STATE={
              
            return { ...state,
             Products:action.payload  };
+
+         case 'SET_SELECTED_PRODUCT':
+            return { ...state,
+                Product:action.payload  };
+         case 'REMOVE_SELECTED_PRODUCT':
+
+            return {};
      
          default:
              return state;
@@ -15,3 +23,4 @@ const INITIAL_STATE={
 
 
  }
+ 
